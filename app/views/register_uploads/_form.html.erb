@@ -1,0 +1,14 @@
+<%= simple_form_for @register_upload, html: {class: 'form-horizontal'},
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                        boolean: :horizontal_boolean
+                    } do |form| %>
+    <%= form.error_notification %>
+    <%= form.association :register, placeholder: 'Register' %>
+    <%= form.input :external_file, placeholder: 'File Name:', as: :file %>
+    <%= form.submit %>
+
+<% end %>

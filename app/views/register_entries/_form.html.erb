@@ -1,0 +1,21 @@
+<%= simple_form_for @register_entry, html: {class: 'form-horizontal'},
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                        boolean: :horizontal_boolean
+                    } do |form| %>
+    <%= form.error_notification %>
+    <%= form.association :register, placeholder: 'Register' %>
+    <%= form.input :entry_date, placeholder: 'Date/Time:', as: :date,
+                   order: [:month, :year] %>
+    <%= form.input :confirmation_number, placeholder: 'Confirmation Number' %>
+    <%= form.input :description, placeholder: 'Description' %>
+    <%= form.association :category, placeholder: 'Category' %>
+    <%= form.input :deposit, placeholder: 'Deposit' %>
+    <%= form.input :withdrawal, placeholder: 'Withdraw' %>
+
+    <%= form.button :submit %>
+
+<% end %>

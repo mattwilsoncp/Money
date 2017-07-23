@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  register: one
+  entry_date: 2017-07-07
+  confirmation_number: MyString
+  description: MyString
+  category: one
+  deposit: 1.5
+  withdrawal: 1.5
+
+two:
+  register: two
+  entry_date: 2017-07-07
+  confirmation_number: MyString
+  description: MyString
+  category: two
+  deposit: 1.5
+  withdrawal: 1.5

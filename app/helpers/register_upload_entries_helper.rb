@@ -1,0 +1,2 @@
+module RegisterUploadEntriesHelper
+end

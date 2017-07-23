@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Register upload:</strong>
+  <%= @register_upload_entry.register_upload_id %>
+</p>
+
+<p>
+  <strong>Entry date:</strong>
+  <%= @register_upload_entry.entry_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @register_upload_entry.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @register_upload_entry.category_id %>
+</p>
+
+<p>
+  <strong>Withdrawal:</strong>
+  <%= @register_upload_entry.withdrawal %>
+</p>
+
+<p>
+  <strong>Deposit:</strong>
+  <%= @register_upload_entry.deposit %>
+</p>
+
+<p>
+  <strong>Register:</strong>
+  <%= @register_upload_entry.register_id %>
+</p>
+
+<%= link_to 'Edit', edit_register_upload_entry_path(@register_upload_entry) %> |
+<%= link_to 'Back', register_upload_entries_path %>

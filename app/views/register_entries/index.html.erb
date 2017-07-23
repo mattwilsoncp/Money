@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Register Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Register</th>
+      <th>Entry date</th>
+      <th>Confirmation number</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Deposit</th>
+      <th>Withdrawal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @register_entries.each do |register_entry| %>
+      <tr>
+        <td><%= register_entry.register %></td>
+        <td><%= register_entry.entry_date %></td>
+        <td><%= register_entry.confirmation_number %></td>
+        <td><%= register_entry.description %></td>
+        <td><%= register_entry.category %></td>
+        <td><%= register_entry.deposit %></td>
+        <td><%= register_entry.withdrawal %></td>
+        <td><%= link_to 'Show', register_entry %></td>
+        <td><%= link_to 'Edit', edit_register_entry_path(register_entry) %></td>
+        <td><%= link_to 'Destroy', register_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Register Entry', new_register_entry_path %>

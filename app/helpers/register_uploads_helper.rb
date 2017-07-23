@@ -1,0 +1,2 @@
+module RegisterUploadsHelper
+end

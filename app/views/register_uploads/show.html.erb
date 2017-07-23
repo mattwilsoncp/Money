@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Register:</strong>
+  <%= @register_upload.register %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @register_upload.filename %>
+</p>
+
+<%= link_to 'Edit', edit_register_upload_path(@register_upload) %> |
+<%= link_to 'Back', register_uploads_path %>

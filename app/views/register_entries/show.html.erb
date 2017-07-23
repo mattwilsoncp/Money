@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Register:</strong>
+  <%= @register_entry.register %>
+</p>
+
+<p>
+  <strong>Entry date:</strong>
+  <%= @register_entry.entry_date %>
+</p>
+
+<p>
+  <strong>Confirmation number:</strong>
+  <%= @register_entry.confirmation_number %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @register_entry.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @register_entry.category %>
+</p>
+
+<p>
+  <strong>Deposit:</strong>
+  <%= @register_entry.deposit %>
+</p>
+
+<p>
+  <strong>Withdrawal:</strong>
+  <%= @register_entry.withdrawal %>
+</p>
+
+<%= link_to 'Edit', edit_register_entry_path(@register_entry) %> |
+<%= link_to 'Back', register_entries_path %>
