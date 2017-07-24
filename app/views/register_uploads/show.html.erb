@@ -2,7 +2,7 @@
 
 <p>
   <strong>Register:</strong>
-  <%= @register_upload.register %>
+  <%= @register_upload.register.name %>
 </p>
 
 <p>
@@ -12,3 +12,14 @@
 
 <%= link_to 'Edit', edit_register_upload_path(@register_upload) %> |
 <%= link_to 'Back', register_uploads_path %>
+
+<table>
+<% for re in @register_upload.register_upload_entries %>
+  <tr>
+    <td><%= re.entry_date.to_s %></td>
+    <td><%= re.description %></td>
+    <td><%= re.withdrawal %></td>
+    <td><%= re.deposit %></td>
+  </tr>
+<% end %>
+</table>

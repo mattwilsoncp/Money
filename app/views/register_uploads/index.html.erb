@@ -7,6 +7,7 @@
     <tr>
       <th>Register</th>
       <th>Filename</th>
+      <th>Upload Date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +15,9 @@
   <tbody>
     <% @register_uploads.each do |register_upload| %>
       <tr>
-        <td><%= register_upload.register %></td>
-        <td><%= register_upload.filename %></td>
+        <td><%= register_upload.register.name %></td>
+        <td><%= register_upload.external_file.url %></td>
+        <td><%= register_upload.created_at.to_s %></td>
         <td><%= link_to 'Show', register_upload %></td>
         <td><%= link_to 'Edit', edit_register_upload_path(register_upload) %></td>
         <td><%= link_to 'Destroy', register_upload, method: :delete, data: { confirm: 'Are you sure?' } %></td>
